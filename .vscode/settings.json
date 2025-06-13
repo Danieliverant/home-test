@@ -1,0 +1,27 @@
+{
+  // Enable ESLint with flat config support
+  "eslint.useFlatConfig": true,
+  "eslint.validate": ["typescript", "html"],
+
+  // Enable auto-import cleanup on save
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "explicit"
+  },
+
+  // Enable bracket colorization in the editor
+  "editor.bracketPairColorization.enabled": true,
+
+  // Prettier formatting on save per language
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  }
+}
