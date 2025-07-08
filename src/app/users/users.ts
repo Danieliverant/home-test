@@ -1,13 +1,12 @@
-import { Component, computed, inject, signal } from '@angular/core';
-import { UsersService } from './users.service';
+import { Component, computed, signal } from '@angular/core';
 import { UserCard } from './user-card/user-card';
 import { MatFormField, MatInput, MatLabel, MatPrefix, MatSuffix } from '@angular/material/input';
 import { MatIcon } from '@angular/material/icon';
 import { FormsModule } from '@angular/forms';
 import { MatIconButton } from '@angular/material/button';
-import { toSignal } from '@angular/core/rxjs-interop';
-import { User } from './users.models';
+import { User, UsersResponse } from './users.models';
 import { getFullName } from './user.utils';
+import { httpResource } from '@angular/common/http';
 
 @Component({
   selector: 'app-users',
@@ -26,13 +25,21 @@ import { getFullName } from './user.utils';
   styleUrl: './users.scss',
 })
 export class Users {
-  private readonly userService = inject(UsersService);
-  private users = toSignal(this.userService.getUsers(), { initialValue: [] });
+  usersRes = httpResource<UsersResponse>(() => 'https://dummyjson.com/users', {
+    defaultValue: {
+      users: [],
+      total: 0,
+      skip: 0,
+      limit: 0,
+    },
+  });
 
   query = signal('');
 
   filteredUsers = computed(() =>
-    this.users().filter((user) => this.getFullName(user).includes(this.query().toLowerCase())),
+    this.usersRes
+      .value()
+      .users.filter((user) => this.getFullName(user).includes(this.query().toLowerCase())),
   );
 
   private getFullName(user: User): string {

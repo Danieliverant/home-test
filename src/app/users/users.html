@@ -1,5 +1,13 @@
 <h2>Users</h2>
 
+@if (usersRes.isLoading()) {
+  Loading...
+}
+
+@if (usersRes.error()) {
+  <p>Something went wrong please try again.</p>
+}
+
 <mat-form-field appearance="outline">
   <mat-label>Search</mat-label>
   <input matInput type="text" placeholder="Search users..." [(ngModel)]="query" />

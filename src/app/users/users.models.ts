@@ -1,3 +1,5 @@
+import { ApiResponse } from '../common/api.models';
+
 export interface User {
   id: number;
   firstName: string;
@@ -67,4 +69,8 @@ export interface User {
     network: string;
   };
   role: 'admin' | 'moderator' | 'user' | string;
+}
+
+export interface UsersResponse extends ApiResponse {
+  users: User[];
 }
