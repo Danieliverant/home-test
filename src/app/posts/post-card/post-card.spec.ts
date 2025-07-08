@@ -16,7 +16,7 @@ import { provideZonelessChangeDetection } from '@angular/core';
 import { Post } from '../posts.models';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 
-fdescribe('PostCard', () => {
+describe('PostCard', () => {
   let component: PostCard;
   let fixture: ComponentFixture<PostCard>;
 
