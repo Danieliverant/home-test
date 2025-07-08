@@ -1,6 +1,6 @@
 <h2>Users</h2>
 
-<mat-form-field appearance="outline" class="search-input">
+<mat-form-field appearance="outline">
   <mat-label>Search</mat-label>
   <input matInput type="text" placeholder="Search users..." [(ngModel)]="query" />
   @if (query()) {
@@ -11,6 +11,8 @@
   <mat-icon matPrefix>search</mat-icon>
 </mat-form-field>
 
-@for (user of filteredUsers(); track user.id) {
-  <app-user-card [user]="user" />
-}
+<div class="users">
+  @for (user of filteredUsers(); track user.id) {
+    <app-user-card [user]="user" />
+  }
+</div>

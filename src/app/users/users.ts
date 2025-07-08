@@ -1,7 +1,7 @@
 import { Component, computed, inject, signal } from '@angular/core';
 import { UsersService } from './users.service';
 import { UserCard } from './user-card/user-card';
-import { MatFormField, MatInput, MatLabel } from '@angular/material/input';
+import { MatFormField, MatInput, MatLabel, MatPrefix, MatSuffix } from '@angular/material/input';
 import { MatIcon } from '@angular/material/icon';
 import { FormsModule } from '@angular/forms';
 import { MatIconButton } from '@angular/material/button';
@@ -11,7 +11,17 @@ import { getFullName } from './user.utils';
 
 @Component({
   selector: 'app-users',
-  imports: [UserCard, MatFormField, MatLabel, MatIcon, MatIconButton, MatInput, FormsModule],
+  imports: [
+    UserCard,
+    MatFormField,
+    MatLabel,
+    MatIcon,
+    MatPrefix,
+    MatSuffix,
+    MatIconButton,
+    MatInput,
+    FormsModule,
+  ],
   templateUrl: './users.html',
   styleUrl: './users.scss',
 })
