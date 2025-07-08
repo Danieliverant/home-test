@@ -1,0 +1,18 @@
+<mat-card appearance="outlined">
+  <mat-card-header class="card-header">
+    <div mat-card-avatar class="card-avatar">
+      <img [ngSrc]="user().image" width="40" height="40" alt="user-avatar" />
+    </div>
+    <mat-card-title class="post-title">{{ fullName() }}</mat-card-title>
+  </mat-card-header>
+  <mat-card-content class="post-content">
+    <p class="post-body">
+      Company: {{ user().company.name }}<br />
+      <!--      Website: {{ user(). }}<br/>-->
+      Email: {{ user().email }}<br />
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button [routerLink]="'/users/' + user().id">View</button>
+  </mat-card-actions>
+</mat-card>

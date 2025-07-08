@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ScrollingModule } from '@angular/cdk/scrolling';
 import { Post } from './posts.models';
-import { PostCard } from './post/post-card';
+import { PostCard } from './post-card/post-card';
 import { PostsDataSource } from './posts-data-source';
 
 @Component({
