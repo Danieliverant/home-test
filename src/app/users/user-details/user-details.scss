@@ -2,3 +2,8 @@
   display: block;
   margin-top: 24px;
 }
+
+.post-card:not(:last-child) {
+  display: block;
+  margin-bottom: 16px;
+}
