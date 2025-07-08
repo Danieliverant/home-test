@@ -9,7 +9,7 @@ import { provideZonelessChangeDetection } from '@angular/core';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 
-fdescribe('UserDetails', () => {
+describe('UserDetails', () => {
   let fixture: ComponentFixture<UserDetails>;
   let component: UserDetails;
 

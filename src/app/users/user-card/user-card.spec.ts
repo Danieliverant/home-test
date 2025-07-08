@@ -13,7 +13,7 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { RouterLink } from '@angular/router';
 import { provideZonelessChangeDetection } from '@angular/core';
 
-fdescribe('UserCard', () => {
+describe('UserCard', () => {
   let component: UserCard;
   let fixture: ComponentFixture<UserCard>;
 
