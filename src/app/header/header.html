@@ -1,0 +1,18 @@
+<mat-toolbar class="toolbar">
+  @if (title()) {
+    <h1>{{ title() }}</h1>
+  }
+
+  <div class="nav-menu">
+    @for (link of links(); track link.route) {
+      <button
+        mat-button
+        [routerLink]="link.route"
+        routerLinkActive="active-link"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >
+        {{ link.label }}
+      </button>
+    }
+  </div>
+</mat-toolbar>

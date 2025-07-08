@@ -1,0 +1,11 @@
+<h2>Posts</h2>
+
+@let itemSize = 200;
+
+<cdk-virtual-scroll-viewport [itemSize]="itemSize" appendOnly class="posts-viewport">
+  <ng-container *cdkVirtualFor="let post of posts; trackBy: trackByPostId">
+    @if (post) {
+      <app-post-card class="post-card" [style.height.px]="itemSize" [post]="post"></app-post-card>
+    }
+  </ng-container>
+</cdk-virtual-scroll-viewport>
