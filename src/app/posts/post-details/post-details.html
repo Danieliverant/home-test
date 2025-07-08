@@ -1,0 +1,18 @@
+@if (post.isLoading()) {
+  Loading...
+}
+
+@if (post.value(); as value) {
+  <app-post-card class="post-card" [showAuthor]="true" [truncateText]="false" [post]="value" />
+
+  @if (commentsRes.isLoading()) {
+    Comments Loading...
+  }
+
+  <h4>Comments:</h4>
+  @for (comment of commentsRes.value().comments; track comment.id) {
+    <app-post-comment [comment]="comment" class="post-comment" />
+  } @empty {
+    No Comments.
+  }
+}
