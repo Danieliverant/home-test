@@ -28,6 +28,8 @@ import { getFullName } from '../user.utils';
   styleUrl: './user-card.scss',
 })
 export class UserCard {
+  showViewMore = input<boolean>(true);
+
   user = input.required<User>();
   fullName = computed(() => getFullName(this.user()));
 }

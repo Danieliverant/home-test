@@ -5,12 +5,7 @@
 
   <div class="nav-menu">
     @for (link of links(); track link.route) {
-      <button
-        mat-button
-        [routerLink]="link.route"
-        routerLinkActive="active-link"
-        [routerLinkActiveOptions]="{ exact: true }"
-      >
+      <button mat-button [routerLink]="link.route" routerLinkActive="active-link">
         {{ link.label }}
       </button>
     }

@@ -1,0 +1,26 @@
+@if (user.isLoading()) {
+  Loading...
+}
+
+@if (user.error()) {
+  <p>Something went wrong please try again.</p>
+}
+
+@if (user.value(); as value) {
+  <app-user-card class="user-card" [user]="value" [showViewMore]="false" />
+
+  @if (postsRes.isLoading()) {
+    Loading posts...
+  }
+
+  @if (postsRes.error()) {
+    <p>Something went wrong please try again.</p>
+  }
+
+  <h4>Posts:</h4>
+  @for (post of postsRes.value().posts; track post.id) {
+    <app-post-card [post]="post" />
+  } @empty {
+    No posts.
+  }
+}
