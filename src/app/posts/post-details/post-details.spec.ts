@@ -5,7 +5,7 @@ import { PostComment } from '../post-comment/post-comment';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { provideZonelessChangeDetection } from '@angular/core';
 
-fdescribe('PostDetails', () => {
+describe('PostDetails', () => {
   let component: PostDetails;
   let fixture: ComponentFixture<PostDetails>;
 
