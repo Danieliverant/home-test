@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "prettier-eslint-husky-setup": {
+    "home-test": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -60,10 +60,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "prettier-eslint-husky-setup:build:production"
+              "buildTarget": "home-test:build:production"
             },
             "development": {
-              "buildTarget": "prettier-eslint-husky-setup:build:development"
+              "buildTarget": "home-test:build:development"
             }
           },
           "defaultConfiguration": "development"
