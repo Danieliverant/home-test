@@ -2,6 +2,10 @@
   Loading...
 }
 
+@if (post.error()) {
+  <p>Something went wrong please try again.</p>
+}
+
 @if (post.value(); as value) {
   <app-post-card
     class="post-card"
@@ -13,6 +17,10 @@
 
   @if (commentsRes.isLoading()) {
     Comments Loading...
+  }
+
+  @if (commentsRes.error()) {
+    <p>Something went wrong please try again.</p>
   }
 
   <h4>Comments:</h4>
