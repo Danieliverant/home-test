@@ -8,7 +8,7 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { provideZonelessChangeDetection } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
-fdescribe('Header', () => {
+describe('Header', () => {
   let component: Header;
   let fixture: ComponentFixture<Header>;
 
