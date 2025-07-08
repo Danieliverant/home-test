@@ -1,3 +1,5 @@
+import { ApiResponse } from '../common/api.models';
+
 export interface PostReactions {
   likes: number;
   dislikes: number;
@@ -13,9 +15,6 @@ export interface Post {
   userId: number;
 }
 
-export interface PostResponse {
+export interface PostResponse extends ApiResponse {
   posts: Post[];
-  total: number;
-  skip: number;
-  limit: number;
 }

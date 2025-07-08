@@ -13,6 +13,7 @@ export const appConfig: ApplicationConfig = {
     provideBrowserGlobalErrorListeners(),
     provideZonelessChangeDetection(),
     provideRouter(routes, withComponentInputBinding()),
+    // TODO: only reason for that is Angular Material Data Source using HttpClient as dependency.
     provideHttpClient(),
   ],
 };
