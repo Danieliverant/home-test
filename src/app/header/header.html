@@ -1,6 +1,6 @@
 <mat-toolbar class="toolbar">
-  @if (title()) {
-    <h1>{{ title() }}</h1>
+  @if (title(); as title) {
+    <h1>{{ title }}</h1>
   }
 
   <div class="nav-menu">
