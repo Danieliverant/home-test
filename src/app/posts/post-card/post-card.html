@@ -1,8 +1,8 @@
 <mat-card appearance="outlined">
   <mat-card-header>
-    <mat-card-title class="post-title" [class.ellipsis]="truncateText()">{{
-      post().title
-    }}</mat-card-title>
+    <mat-card-title [class.ellipsis]="truncateText()">
+      <h5 class="post-title">{{ post().title }}</h5>
+    </mat-card-title>
     @if (showAuthor()) {
       <mat-card-subtitle>
         By: <a [routerLink]="'/users/' + author.value()?.id">{{ authorFullName() }}</a>

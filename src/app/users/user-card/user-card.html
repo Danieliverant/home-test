@@ -1,15 +1,16 @@
-<mat-card appearance="outlined">
+<mat-card appearance="outlined" class="card">
   <mat-card-header class="card-header">
     <div mat-card-avatar class="card-avatar">
       <img [ngSrc]="user().image" width="40" height="40" alt="user-avatar" />
     </div>
-    <mat-card-title class="user-title">{{ fullName() }}</mat-card-title>
+    <mat-card-title
+      ><h5 class="user-title">{{ fullName() }}</h5></mat-card-title
+    >
   </mat-card-header>
-  <mat-card-content class="user-content">
+  <mat-card-content>
     <p class="user-body">
       Company: {{ user().company.name }}<br />
-      <!--      Website: {{ user(). }}<br/>-->
-      Email: {{ user().email }}<br />
+      Email: {{ user().email }}
     </p>
   </mat-card-content>
   <mat-card-actions align="end">

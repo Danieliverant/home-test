@@ -1,3 +1,7 @@
+.card {
+  flex: 1;
+}
+
 .card-header {
   align-items: center;
   flex-direction: column;
@@ -10,4 +14,8 @@
 .user-body {
   display: flex;
   justify-content: center;
+}
+
+.user-title {
+  margin: 0;
 }

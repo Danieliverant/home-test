@@ -3,3 +3,9 @@
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 16px;
 }
+
+.user-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
