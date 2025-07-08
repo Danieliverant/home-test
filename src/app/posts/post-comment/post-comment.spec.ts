@@ -3,7 +3,7 @@ import { PostComment } from './post-comment';
 import { Comment } from './post-comment.models';
 import { provideZonelessChangeDetection } from '@angular/core';
 
-fdescribe('PostComment', () => {
+describe('PostComment', () => {
   let component: PostComment;
   let fixture: ComponentFixture<PostComment>;
 
