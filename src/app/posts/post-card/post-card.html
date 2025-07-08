@@ -13,6 +13,8 @@
     <p class="post-body" [class.ellipsis]="truncateText()">{{ post().body }}</p>
   </mat-card-content>
   <mat-card-actions align="end">
-    <button mat-button [routerLink]="'/posts/' + post().id">View</button>
+    @if (showViewMore()) {
+      <button mat-button [routerLink]="'/posts/' + post().id">View</button>
+    }
   </mat-card-actions>
 </mat-card>

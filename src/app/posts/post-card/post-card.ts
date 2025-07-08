@@ -32,6 +32,7 @@ import { getFullName } from '../../users/user.utils';
 export class PostCard {
   post = input.required<Post>();
 
+  showViewMore = input<boolean>(true);
   showAuthor = input<boolean>(false);
   truncateText = input<boolean>(true);
 

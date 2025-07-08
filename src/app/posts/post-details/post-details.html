@@ -3,7 +3,13 @@
 }
 
 @if (post.value(); as value) {
-  <app-post-card class="post-card" [showAuthor]="true" [truncateText]="false" [post]="value" />
+  <app-post-card
+    class="post-card"
+    [showAuthor]="true"
+    [truncateText]="false"
+    [showViewMore]="false"
+    [post]="value"
+  />
 
   @if (commentsRes.isLoading()) {
     Comments Loading...

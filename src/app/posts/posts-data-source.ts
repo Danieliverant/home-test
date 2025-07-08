@@ -38,7 +38,7 @@ export class PostsDataSource extends DataSource<Post | undefined> {
     return Math.floor(index / this._pageSize);
   }
 
-  // TODO: something with the subscribe inside subscribe don't sit well with me.
+  // TODO: this can be refactored to handle errors and better RXJS stream.
   private _fetchPage(page: number) {
     if (this._fetchedPages.has(page)) {
       return;
